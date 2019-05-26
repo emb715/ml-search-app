@@ -1,0 +1,23 @@
+@import './variables';
+@import './font-proximaNova';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  overflow-x: hidden;
+}
+html{
+  font-family: "Proxima Nova","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
+  // font-size: 62.5%;
+}
+body {
+  // font-size: 1.6rem;
+  background-color: #eee;
+}
+
+a{
+  text-decoration: none;
+}

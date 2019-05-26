@@ -1,0 +1,93 @@
+@import './variables';
+
+.breadcrum{
+  padding: map-get($spacing, 'md') 0;
+  font-size: 14px;
+  color: map-get($colors, 'grey');
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline-block;
+      &:after{
+        content: '>';
+        margin: 0 map-get($spacing, 'xs');
+      }
+      &:last-child{
+        font-weight: bold;
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.detail{
+  margin-bottom: map-get($spacing, 'xl');
+  overflow: hidden;
+  border-radius: $border-radius $border-radius 0 0;
+  background-color: white;
+}
+.detail__header{
+  display: flex;
+  flex-direction: row;
+}
+.detail__picture{
+  width: 600px;
+  height: auto;
+  overflow: hidden;
+  > img{
+
+  }
+}
+.detail__info{
+  flex: 1;
+  margin-top: map-get($spacing, 'xl');
+}
+.detail__subtitle{
+  padding-bottom: map-get($spacing, 'md');
+  font-size: 14px;
+}
+.detail__title{
+  margin-bottom: map-get($spacing, 'xl');
+  font-size: 24px;
+  font-weight: bold;
+}
+.detail__price{
+  margin-bottom: map-get($spacing, 'xl');
+  font-size: 46px;
+  line-height: 1;
+  > .decimals{
+    top: auto;
+    vertical-align: super;
+    font-size: 50%;
+    margin-left: map-get($spacing, 'xxs');
+  }
+}
+.detail__button{
+  min-width: 200px;
+  width: calc(100% - 2rem);
+  padding: map-get($spacing, 'sm');
+  border: 0;
+  border-radius: 5px;
+  background-color: map-get($colors, 'button');
+  color: white;
+  cursor: pointer;
+}
+
+.description{
+  width: 600px;
+  margin-left: map-get($spacing, 'xl');
+  margin-top: map-get($spacing, 'xl');
+}
+.description__title{
+  margin-bottom: map-get($spacing, 'xl');
+  font-size: 28px;
+}
+.description__text{
+  margin-bottom: map-get($spacing, 'xl');
+  font-size: 16px;
+  line-height: 1.4;
+  color: map-get($colors, 'neutral');
+}

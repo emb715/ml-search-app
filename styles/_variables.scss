@@ -1,0 +1,40 @@
+
+/* GRID */
+// $grid-max-width: 1044px;
+$grid-max-width: 868px;
+$grid-gutter: 1rem; // 16px
+$grid-columns: 12;
+
+
+
+$spacing-unit: 1rem;
+
+$spacing: (
+  "xxs": $spacing-unit * .25,
+  "xs": $spacing-unit * .5,
+  "sm": $spacing-unit * .75,
+  "md": $spacing-unit * 1,
+  "lg": $spacing-unit * 1.5,
+  "xl": $spacing-unit * 2
+);
+  
+$border-radius: 4px;
+
+$colors: (
+  "primary": #ffe600,
+  "secundary": #333,
+  "grey": #666,
+  "neutral": #999,
+  "background": #eee,
+  "button": #3483fa,
+);
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin getFontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}

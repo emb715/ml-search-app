@@ -1,0 +1,35 @@
+@import './variables';
+
+.search{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  .search__input{
+    flex: 1;
+    padding: map-get($spacing, 'xs');
+    // font-size: 18px;
+    border: 0;
+    border-radius: $border-radius 0 0 $border-radius;
+    background-color: white;
+    transition: all 0.25s ease;
+    &:focus{
+      outline: none;
+      box-shadow: 3px 3px 10px map-get($colors, 'neutral');
+    }
+  }
+  .search__button{
+    padding: map-get($spacing, 'xs');
+    width: 2.5rem;
+    text-indent: -99999px;
+    border:0;
+    border-radius: 0 $border-radius $border-radius 0;
+    background-color: map-get($colors, 'background');
+    background-image: url('/static/img/ic_Search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+  }
+}
